@@ -1,0 +1,189 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #f5f5f5;
+    color: #333;
+  }
+  
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  header {
+    text-align: center;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  h1 {
+    color: #2c3e50;
+    margin-bottom: 5px;
+  }
+  
+  h2 {
+    color: #3498db;
+    margin-top: 0;
+  }
+  
+  h3 {
+    color: #2c3e50;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+    margin-top: 25px;
+  }
+  
+  h4 {
+    color: #3498db;
+    margin-bottom: 10px;
+  }
+  
+  .form-section {
+    margin-bottom: 30px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .name-fields {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .name-fields input {
+    flex: 1;
+  }
+  
+  .date-fields {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .date-fields input {
+    width: 50px;
+    text-align: center;
+  }
+  
+  .address-fields {
+    display: flex;
+    gap: 10px;
+    margin-top: 5px;
+  }
+  
+  .address-fields input {
+    flex: 1;
+  }
+  
+  .checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .checkbox-group label, .form-group label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="date"],
+  textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  input[type="checkbox"],
+  input[type="radio"] {
+    margin-right: 5px;
+  }
+  
+  textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+  
+  .contact-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+  }
+  
+  .contact-table td {
+    padding: 5px;
+    vertical-align: top;
+  }
+  
+  .contact-table input {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .form-actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+  }
+  
+  .btn-submit, .btn-reset {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+  
+  .btn-submit {
+    background-color: #27ae60;
+    color: white;
+  }
+  
+  .btn-submit:hover {
+    background-color: #219653;
+  }
+  
+  .btn-reset {
+    background-color: #e74c3c;
+    color: white;
+  }
+  
+  .btn-reset:hover {
+    background-color: #c0392b;
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      padding: 15px;
+    }
+    
+    .name-fields, .address-fields {
+      flex-direction: column;
+      gap: 5px;
+    }
+    
+    .name-fields input, .address-fields input {
+      width: 100%;
+    }
+    
+    .contact-table {
+      display: block;
+      overflow-x: auto;
+    }
+  }

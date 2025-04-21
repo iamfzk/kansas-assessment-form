@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kansas Department for Aging and Disability Services Assessment</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="/public/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <form class="container" id="assessmentForm">
+    <header>
+      <h1>Kansas Department for Aging and Disability Services (KDADS)</h1>
+      <h2>Kansas interRAI - FE, PD, BI, PACE - Adult</h2>
+    </header>
+
+    <!-- Section A: Identification Information -->
+    <section class="form-section">
+      <h3>SECTION A: IDENTIFICATION INFORMATION</h3>
+      
+      <div class="form-group">
+        <label>1. Name</label>
+        <div class="name-fields">
+          <input type="text" placeholder="First" name="firstName">
+          <input type="text" placeholder="MI" name="middleInitial" maxlength="1">
+          <input type="text" placeholder="Last" name="lastName">
+          <input type="text" placeholder="Jr/Sr" name="nameSuffix">
+        </div>
+        <label>Preferred name: <input type="text" name="preferredName"></label>
+      </div>
+
+      <div class="form-group">
+        <label>2. Assessment Type:</label>
+        <label><input type="checkbox" name="assessmentType" value="FE"> FE; PACE</label>
+        <label><input type="checkbox" name="assessmentType" value="PD"> PD</label>
+        <label><input type="checkbox" name="assessmentType" value="TBI"> TBI</label>
+      </div>
+
+      <div class="form-group">
+        <label>3. Gender</label>
+        <label><input type="radio" name="gender" value="Male"> Male</label>
+        <label><input type="radio" name="gender" value="Female"> Female</label>
+        <label><input type="radio" name="gender" value="Other"> Other: <input type="text" name="genderOther"></label>
+      </div>
+
+      <div class="form-group">
+        <label>4. Birthdate (Month/Day/Year)</label>
+        <div class="date-fields">
+          <input type="text" placeholder="MM" name="birthMonth" maxlength="2" size="2">
+          <span>/</span>
+          <input type="text" placeholder="DD" name="birthDay" maxlength="2" size="2">
+          <span>/</span>
+          <input type="text" placeholder="YYYY" name="birthYear" maxlength="4" size="4">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>5. Income Below Poverty Level?</label>
+        <label><input type="radio" name="povertyLevel" value="Yes"> Yes</label>
+        <label><input type="radio" name="povertyLevel" value="No"> No</label>
+        <label><input type="radio" name="povertyLevel" value="Unknown"> Unknown</label>
+      </div>
+
+      <div class="form-group">
+        <label>6. Consumer Contact</label>
+        <input type="text" name="streetAddress" placeholder="Street Address, Apt #">
+        <div class="address-fields">
+          <input type="text" name="city" placeholder="City">
+          <input type="text" name="county" placeholder="County">
+          <input type="text" name="state" placeholder="State">
+          <input type="text" name="zip" placeholder="Zipcode">
+        </div>
+        <input type="tel" name="primaryPhone" placeholder="Phone Number, Primary">
+        <input type="email" name="primaryEmail" placeholder="Email">
+        <input type="tel" name="altPhone" placeholder="Phone Number, Alternative">
+        
+        <label>Mailing Alt. Address (if applicable)</label>
+        <input type="text" name="altStreetAddress" placeholder="Street Address/PO Box, Apt #">
+        <div class="address-fields">
+          <input type="text" name="altCity" placeholder="City">
+          <input type="text" name="altCounty" placeholder="County">
+          <input type="text" name="altState" placeholder="State">
+          <input type="text" name="altZip" placeholder="Zip">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>7. ID information</label>
+        <input type="text" name="ssn" placeholder="Social Security Number">
+        <input type="text" name="medicareNumber" placeholder="Medicare Number (or comparable railroad insurance number)">
+        <input type="text" name="medicaidNumber" placeholder="Medicaid Number">
+        <label><input type="checkbox" name="medicaidPending"> Pending</label>
+        <label><input type="checkbox" name="notMedicaidRecipient"> Not Medicaid Recipient</label>
+      </div>
+
+      <div class="form-group">
+        <label>9. Marital Status</label>
+        <label><input type="radio" name="maritalStatus" value="Never Married"> Never Married</label>
+        <label><input type="radio" name="maritalStatus" value="Married"> Married</label>
+        <label><input type="radio" name="maritalStatus" value="Partner"> Partner/Significant other</label>
+        <label><input type="radio" name="maritalStatus" value="Widowed"> Widowed</label>
+        <label><input type="radio" name="maritalStatus" value="Separated"> Separated</label>
+        <label><input type="radio" name="maritalStatus" value="Divorced"> Divorced</label>
+      </div>
+
+      <div class="form-group">
+        <label>10. Legal Guardian or DPOA Contact (Check all that apply)</label>
+        <div class="checkbox-group">
+          <label><input type="checkbox" name="guardianType" value="Legal Guardian"> Legal Guardian</label>
+          <label><input type="checkbox" name="guardianType" value="DPOA Active"> DPOA, Active</label>
+          <label><input type="checkbox" name="guardianType" value="POA Other"> POA, other</label>
+          <label><input type="checkbox" name="guardianType" value="Designated representative"> Designated representative</label>
+          <label><input type="checkbox" name="guardianType" value="No Guardian"> N/A - No Guardian, etc</label>
+          <label><input type="checkbox" name="guardianType" value="Health"> Health</label>
+          <label><input type="checkbox" name="guardianType" value="Finance"> Finance</label>
+          <label><input type="checkbox" name="guardianType" value="Other"> Other: <input type="text" name="guardianOther"></label>
+        </div>
+        <input type="text" name="guardianName" placeholder="Name">
+        <input type="text" name="guardianRelationship" placeholder="Relationship">
+        <input type="text" name="guardianStreet" placeholder="Street Address, Apt #">
+        <div class="address-fields">
+          <input type="text" name="guardianCity" placeholder="City">
+          <input type="text" name="guardianCounty" placeholder="County">
+          <input type="text" name="guardianState" placeholder="State">
+          <input type="text" name="guardianZip" placeholder="Zip">
+        </div>
+        <input type="tel" name="guardianPhone" placeholder="Phone Number">
+        <input type="email" name="guardianEmail" placeholder="Email">
+        <input type="tel" name="guardianAltPhone" placeholder="Phone Alternative">
+      </div>
+
+      <div class="form-group">
+        <label>11. Emergency Contact</label>
+        <label><input type="checkbox" name="sameAsGuardian"> Check if same as Legal Guardian/DPOA, above</label>
+        <input type="text" name="emergencyName" placeholder="Name">
+        <input type="text" name="emergencyRelationship" placeholder="Relationship">
+        <input type="text" name="emergencyStreet" placeholder="Street Address, Apt #">
+        <div class="address-fields">
+          <input type="text" name="emergencyCity" placeholder="City">
+          <input type="text" name="emergencyCounty" placeholder="County">
+          <input type="text" name="emergencyState" placeholder="State">
+          <input type="text" name="emergencyZip" placeholder="Zip">
+        </div>
+        <input type="tel" name="emergencyPhone" placeholder="Phone Number">
+        <input type="email" name="emergencyEmail" placeholder="Email">
+        <input type="tel" name="emergencyAltPhone" placeholder="Phone Alternative">
+      </div>
+
+      <div class="form-group">
+        <label>12. Assessment Information</label>
+        <input type="text" name="assessorName" placeholder="Assessor Name">
+      </div>
+    </section>
+
+    <!-- Contact Information Section -->
+    <section class="form-section">
+      <h3>SECTION A: Contact information</h3>
+      <label>Date sent to eligibility worker: <input type="date" name="dateSent"></label>
+
+      <div class="form-group">
+        <h4>TO (eligibility worker's information)</h4>
+        <table class="contact-table">
+          <tr>
+            <td><input type="text" placeholder="NAME OF ELIGIBILITY WORKER" name="eligibilityWorkerName"></td>
+            <td><input type="text" placeholder="NAME OF COUNTY/TRIBAL NATION AGENCY" name="eligibilityAgency"></td>
+            <td><input type="tel" placeholder="PHONE NUMBER" name="eligibilityPhone"></td>
+          </tr>
+          <tr>
+            <td colspan="3"><input type="text" placeholder="STREET ADDRESS" name="eligibilityStreet"></td>
+          </tr>
+          <tr>
+            <td><input type="text" placeholder="CITY" name="eligibilityCity"></td>
+            <td><input type="text" placeholder="STATE" name="eligibilityState"></td>
+            <td><input type="text" placeholder="ZIP CODE" name="eligibilityZip"></td>
+            <td><input type="text" placeholder="FAX NUMBER" name="eligibilityFax"></td>
+          </tr>
+          <tr>
+            <td colspan="2"><input type="email" placeholder="EMAIL ADDRESS" name="eligibilityEmail"></td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="form-group">
+        <h4>FROM (assessor/case manager/care coordinator's information)</h4>
+        <table class="contact-table">
+          <tr>
+            <td><input type="text" placeholder="NAME OF ASSESSOR/CASE MANAGER/CARE COORDINATOR" name="assessorName"></td>
+            <td><input type="text" placeholder="NAME OF LEAD AGENCY" name="leadAgency"></td>
+            <td><input type="tel" placeholder="PHONE NUMBER" name="assessorPhone"></td>
+          </tr>
+          <tr>
+            <td colspan="3"><input type="text" placeholder="STREET ADDRESS" name="assessorStreet"></td>
+          </tr>
+          <tr>
+            <td><input type="text" placeholder="CITY" name="assessorCity"></td>
+            <td><input type="text" placeholder="STATE" name="assessorState"></td>
+            <td><input type="text" placeholder="ZIP CODE" name="assessorZip"></td>
+            <td><input type="text" placeholder="FAX NUMBER" name="assessorFax"></td>
+          </tr>
+          <tr>
+            <td colspan="2"><input type="email" placeholder="EMAIL ADDRESS" name="assessorEmail"></td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="form-group">
+        <label>Additional assessors/case managers/care coordinator (if applicable)</label>
+        <label>Do you need to add additional assessors/case managers/care coordinator?
+          <input type="radio" name="additionalAssessors" value="Yes"> Yes
+          <input type="radio" name="additionalAssessors" value="No"> No
+        </label>
+      </div>
+
+      <div class="form-group">
+        <h4>PERSON'S INFORMATION</h4>
+        <table class="contact-table">
+          <tr>
+            <td><input type="text" placeholder="FIRST NAME" name="personFirstName"></td>
+            <td><input type="text" placeholder="MI" name="personMI" maxlength="1"></td>
+            <td><input type="text" placeholder="LAST NAME" name="personLastName"></td>
+            <td><input type="text" placeholder="DATE OF BIRTH" name="personDOB"></td>
+            <td><input type="text" placeholder="PMI" name="personPMI"></td>
+            <td><input type="text" placeholder="CASE NUMBER" name="caseNumber"></td>
+          </tr>
+        </table>
+      </div>
+    </section>
+
+    <!-- Residential/Living Status -->
+    <section class="form-section">
+      <h3>15. Residential/Living Status at Time of Assessment</h3>
+      <div class="form-group">
+        <div class="checkbox-group">
+          <label><input type="radio" name="residence" value="1"> 1-Private home/apartment/rented room</label>
+          <label><input type="radio" name="residence" value="2"> 2-Assisted living facility</label>
+          <label><input type="radio" name="residence" value="3"> 3-Home plus/group home</label>
+          <label><input type="radio" name="residence" value="4"> 4-Long-term care facility (nursing homes, including skilled)</label>
+          <label><input type="radio" name="residence" value="5"> 5-Hospice facility/palliative care unit</label>
+          <label><input type="radio" name="residence" value="6"> 6-Acute care hospital/unit</label>
+          <label><input type="radio" name="residence" value="7"> 7-Rehabilitation hospital/unit</label>
+          <label><input type="radio" name="residence" value="8"> 8-TBI rehabilitation facility (TBIRF)</label>
+          <label><input type="radio" name="residence" value="9"> 9-Psychiatric residential treatment facility</label>
+          <label><input type="radio" name="residence" value="10"> 10-Nursing facility-mental health</label>
+          <label><input type="radio" name="residence" value="11"> 11-Psychiatric hospital/unit</label>
+          <label><input type="radio" name="residence" value="12"> 12-Intermediate care facility for individuals with ID (ICF-IID)</label>
+          <label><input type="radio" name="residence" value="13"> 13-Correctional facility</label>
+          <label><input type="radio" name="residence" value="14"> 14-Homeless (with or without shelter)</label>
+          <label>15-Other: <input type="text" id="residenceOther"></label>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Is this residence permanent?
+          <input type="radio" name="permanent" value="Yes"> Yes
+          <input type="radio" name="permanent" value="No"> No
+        </label>
+      </div>
+      <div class="form-group" id="permanentResidenceGroup" style="display: none;">
+        <label>If not permanent, identify permanent residence:
+          <input type="text" id="permanentResidence">
+        </label>
+      </div>
+    </section>
+
+    <!-- Living Arrangement -->
+    <section class="form-section">
+      <h3>16. Living Arrangement</h3>
+      <div class="form-group">
+        <div class="checkbox-group">
+          <label><input type="radio" name="livingArrangement" value="Alone"> Alone</label>
+          <label><input type="radio" name="livingArrangement" value="With spouse/partner only"> With spouse/partner only</label>
+          <label><input type="radio" name="livingArrangement" value="With spouse/partner and other(s)"> With spouse/partner and other(s)</label>
+          <label><input type="radio" name="livingArrangement" value="With child (but not with spouse/partner)"> With child (but not with spouse/partner)</label>
+          <label><input type="radio" name="livingArrangement" value="With parent(s) or guardian(s)"> With parent(s) or guardian(s)</label>
+          <label><input type="radio" name="livingArrangement" value="With sibling(s)"> With sibling(s)</label>
+          <label><input type="radio" name="livingArrangement" value="With other relative(s)"> With other relative(s)</label>
+          <label><input type="radio" name="livingArrangement" value="With nonrelative(s)"> With nonrelative(s)</label>
+          <label><input type="radio" name="livingArrangement" value="Not applicable"> Not applicable (e.g., institutional setting)</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>As compared to 90 DAYS AGO (or since last assessment), person now lives with someone new:
+          <input type="radio" name="moved" value="Yes"> Yes
+          <input type="radio" name="moved" value="No"> No
+        </label>
+      </div>
+      <div class="form-group">
+        <label>Person feels that s/he would be better off living elsewhere:
+          <input type="radio" name="person_better_off" value="No"> No
+          <input type="radio" name="person_better_off" value="Yes_other"> Yes, other community residences
+          <input type="radio" name="person_better_off" value="Yes_institution"> Yes, institution
+        </label>
+      </div>
+      <div class="form-group">
+        <label>Relative/caregiver feels that the person would be better off living elsewhere:
+          <input type="radio" name="caregiver_feels" value="No"> No
+          <input type="radio" name="caregiver_feels" value="Yes_other"> Yes, other community residences
+          <input type="radio" name="caregiver_feels" value="Yes_institution"> Yes, institution
+        </label>
+      </div>
+    </section>
+
+    <!-- Residential History -->
+    <section class="form-section">
+      <h3>18. Residential history over last 5 YEARS</h3>
+      <div class="form-group">
+        <div class="checkbox-group">
+          <label><input type="checkbox" name="resHistory" value="Long-term care facility"> Long-term care facility—e.g., nursing home</label>
+          <label><input type="checkbox" name="resHistory" value="Board and care home"> Board and care home, assisted living</label>
+          <label><input type="checkbox" name="resHistory" value="Psychiatric residential treatment facility"> Psychiatric residential treatment facility</label>
+          <label><input type="checkbox" name="resHistory" value="Psychiatric hospital or unit"> Psychiatric hospital or unit</label>
+          <label><input type="checkbox" name="resHistory" value="ICF-IID"> Intermediate care facility for individuals with ID (ICF-IID)</label>
+          <label><input type="checkbox" name="resHistory" value="TBIRF"> TBI Rehabilitation Facility (TBIRF)</label>
+          <label><input type="checkbox" name="resHistory" value="Correctional facility"> Correctional facility</label>
+          <label><input type="checkbox" name="resHistory" value="Unknown"> Unknown</label>
+          <label><input type="checkbox" name="resHistory" value="None"> None</label>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ethnicity and Race -->
+    <section class="form-section">
+      <h3>19. Ethnicity and race (check all that apply)</h3>
+      <div class="form-group">
+        <label>Ethnicity:</label>
+        <label><input type="checkbox" name="ethnicity" value="Hispanic or Latino"> Hispanic or Latino</label>
+      </div>
+      <div class="form-group">
+        <label>Race:</label>
+        <div class="checkbox-group">
+          <label><input type="checkbox" name="race" value="American Indian or Alaska Native"> American Indian or Alaska Native</label>
+          <label><input type="checkbox" name="race" value="Asian"> Asian</label>
+          <label><input type="checkbox" name="race" value="Black or African"> Black or African</label>
+          <label><input type="checkbox" name="race" value="Native Hawaiian or other Pacific Islander"> Native Hawaiian or other Pacific Islander</label>
+          <label><input type="checkbox" name="race" value="White"> White</label>
+          <label><input type="checkbox" name="race" value="Other"> Other (check only if not listed above)</label>
+        </div>
+      </div>
+    </section>
+
+    <!-- Primary Language -->
+    <section class="form-section">
+      <h3>20. Primary Language</h3>
+      <div class="form-group">
+        <div class="checkbox-group">
+          <label><input type="radio" name="language" value="Chinese/Cantonese"> Chinese/Cantonese</label>
+          <label><input type="radio" name="language" value="English"> English</label>
+          <label><input type="radio" name="language" value="Hindi"> Hindi</label>
+          <label><input type="radio" name="language" value="Spanish"> Spanish</label>
+          <label><input type="radio" name="language" value="Urdu"> Urdu</label>
+          <label><input type="radio" name="language" value="French"> French</label>
+          <label><input type="radio" name="language" value="Lao"> Lao</label>
+          <label><input type="radio" name="language" value="German"> German</label>
+          <label><input type="radio" name="language" value="Sign Language"> Sign Language</label>
+          <label><input type="radio" name="language" value="Russian"> Russian</label>
+          <label><input type="radio" name="language" value="Braille"> Braille</label>
+          <label><input type="radio" name="language" value="Filipino/Tagalog"> Filipino/Tagalog</label>
+          <label><input type="radio" name="language" value="Non-Verbal"> Non-Verbal</label>
+          <label><input type="radio" name="language" value="Vietnamese"> Vietnamese</label>
+          <label>Other: <input type="text" id="languageOther"></label>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Interpreter Used:
+          <input type="radio" name="interpreter" value="Yes"> Yes
+          <input type="radio" name="interpreter" value="No"> No
+        </label>
+      </div>
+      <div class="form-group" id="interpreterTypeGroup" style="display: none;">
+        <label>If yes:
+          <input type="radio" name="interpreter_type" value="Professional"> Professional
+          <input type="radio" name="interpreter_type" value="Family/friend"> Family/friend
+        </label>
+      </div>
+    </section>
+
+    <!-- Disaster Risk -->
+    <section class="form-section">
+      <h3>21. Disaster Risk (non-crisis)</h3>
+      <div class="form-group">
+        <div class="checkbox-group">
+          <label><input type="checkbox" name="disasterRisk" value="Electric"> Electric</label>
+          <label><input type="checkbox" name="disasterRisk" value="Cognitive/mental health issues"> Cognitive/mental health issues</label>
+          <label><input type="checkbox" name="disasterRisk" value="Physical impairment"> Physical impairment</label>
+          <label><input type="checkbox" name="disasterRisk" value="No informal support"> No informal support</label>
+          <label><input type="checkbox" name="disasterRisk" value="Medication assistance"> Medication assistance</label>
+          <label><input type="checkbox" name="disasterRisk" value="None"> None</label>
+        </div>
+      </div>
+    </section>
+
+    <!-- Goals of Care -->
+    <section class="form-section">
+      <h3>22. Person's expressed goals of care</h3>
+      <div class="form-group">
+        <textarea id="goalsOfCare" rows="5" style="width: 100%;" placeholder="Enter major goals here"></textarea>
+      </div>
+      <div class="form-group">
+        <label>Primary Goal: <input type="text" id="primaryGoal" placeholder="Enter primary goal"></label>
+      </div>
+    </section>
+
+    <div class="form-actions">
+      <button type="submit" class="btn-submit">Submit</button>
+      <button type="reset" class="btn-reset">Reset</button>
+    </div>
+  </form>
+
+  <script src="script.js"></script>
+</body>
+</html>
